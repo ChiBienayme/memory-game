@@ -23,3 +23,10 @@ h2,
 p {
   color: white;
 }
+
+.playWindow {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

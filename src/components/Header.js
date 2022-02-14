@@ -8,19 +8,19 @@ class Header extends React.Component {
       countdown: 30,
       color : "white",
     }
+
   }
 
-
   componentDidMount() {
-    setInterval (() => {
-      if (this.state.countdown !== 0) {
-      this.setState(prevState => ({
-        countdown: prevState.countdown - 1
-      }))
-    } else {
-      this.setState({countdown: 0})
-    }
-    }, 1000);
+      setInterval (() => {
+        if (this.state.countdown !== 0) {
+        this.setState(prevState => ({
+          countdown: prevState.countdown - 1
+        }))
+      } else {
+        this.setState({countdown: 0})
+      }
+      }, 1000);
   }
 
   componentDidUpdate(_prevProps, prevState) {
@@ -50,6 +50,7 @@ class Header extends React.Component {
             <p>Trouve les images identiques et c'est gagné!</p>
             <p style={{color: this.state.color}}>Countdown: {this.state.countdown}</p>
           </div>
+          {/* <div><button onClick={this.startGame()}>Play</button></div> */}
           <div>{this.renderReset()}</div>
         </div>
       </header>
