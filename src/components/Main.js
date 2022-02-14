@@ -3,6 +3,7 @@ import React from "react"; //
 import "./Main.module.css";
 import Card from "./Card";
 import Reset from "./Reset";
+import TimeOut from "./TimeOut";
 
 class Main extends React.Component {
   constructor() {
@@ -25,6 +26,9 @@ class Main extends React.Component {
       currentValue1: "",
       currentValue2: "",
       matchedCards: 0,
+      isTimeOut : false,
+      displayCards : "initial",
+      countdown : 30,
     };
     this.turnTheCard = this.turnTheCard.bind(this);
     this.addMatchedCards = this.addMatchedCards.bind(this);
@@ -77,8 +81,17 @@ class Main extends React.Component {
           </div>
         </>
       );
+    } else {
+      return <TimeOut />
     }
   }
+
+  // renderTimeOut() {
+  //   if (this.state.matchedCards !== 6) {
+  //     return <TimeOut isTimeOut={this.setState({isTimeOut: true})}/>
+  //   }
+  // }
+
   // takes index of first and last cards in the rendered row
   renderCards(firstCard, lastCard) {
     console.log(this.state.cardProps);

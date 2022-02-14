@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
+// import TimeOut from "./components/TimeOut";
 import "./App.css";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -25,6 +27,7 @@ class App extends React.Component {
       <>
         <Header finish={this.state.finished} />
         <Main finish={this.state.finished} gameOver={this.gameOver} />
+        {/* <TimeOut /> */}
       </>
     );
   }
