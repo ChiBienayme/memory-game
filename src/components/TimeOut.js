@@ -26,7 +26,7 @@ class TimeOut extends React.Component {
 
               
             
-         }, 10000);
+         }, 30000);
     }
 
 
